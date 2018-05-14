@@ -1,0 +1,25 @@
+Problem 4: Show that k=0 (innitely large scale) is still stable even when CFL condition is
+violated. (5) What other k values are still stable when the CFL condition is violated? (5)
+______________________________________________________________________________________________
+
+The CFL Condition is defined as a=vdt/dx
+Using the stability equation:
+pj(new)=pj-(pj-p(j-1)) vdt/dx
+
+pj=exp(ikj) and a=vdt/dx
+pj(new)= exp(ikj)*[1-a(1-exp(-ik))]
+
+For the CFL Condition: 
+[1-a(1-exp(-ik))] 
+We look at the 1-exp(-ik)
+which is bounded by 0 and 2 as k=0 and k=infintity respectively
+
+If k=0 then (1-exp(-ik))=0 and [1-a(1-exp(-ik))] =1
+That shows that it is still stable
+
+There is stability for all values of k where k is equal or greater than 0. 
+Even if the CFL condition is violated, and this occurs when a<=1, dt<dx/v.
+Thus dt must be shorter than the 
+crossing time of the cell.
+
+
